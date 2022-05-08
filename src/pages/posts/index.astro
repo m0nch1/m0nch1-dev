@@ -1,0 +1,25 @@
+---
+import Layout from '@/components/Layout.astro';
+
+const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
+const baseHeaders = {
+  headers: { 'Authorization': `Bearer ${import.meta.env.PUBLIC_NEWT_TOKET}` },
+};
+
+const response = await fetch(apiUrl, baseHeaders);
+const data = await response.json();
+---
+
+<Layout title="Post list">
+  <h1>Post list</h1>
+
+  <ul>
+    {data.items.map((item) => (
+      <li>
+        <a href={`/posts/${item._id}`}>
+          {item.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</Layout>

@@ -1,0 +1,25 @@
+---
+export const getStaticPaths = async () => {
+  const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
+  const baseHeaders = {
+    headers: { 'Authorization': `Bearer ${import.meta.env.PUBLIC_NEWT_TOKET}` },
+  };
+
+  const response = await fetch(apiUrl, baseHeaders);
+  const data = await response.json();
+
+  return data.items.map(item => {
+    return {
+      params: { id: item._id },
+      props: { item } };
+  });
+}
+
+const {item} = Astro.props;
+---
+
+<html lang="ja">
+<body>
+  <div set:html={item.body} />
+</body>
+</html>
