@@ -1,5 +1,6 @@
 ---
 import Layout from '@/layouts/index.astro';
+import Article from '@/components/pages/posts/Article';
 
 const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
 const baseHeaders = {
@@ -8,18 +9,24 @@ const baseHeaders = {
 
 const response = await fetch(apiUrl, baseHeaders);
 const data = await response.json();
+
 ---
 
-<Layout title="Post list">
-  <h1>Post list</h1>
+<Layout title="Posts">
+  <div class="mb-10 md:mb-16">
+    <h1 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Posts</h1>
+    <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+  </div>
 
-  <ul>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-8 sm:gap-12 xl:gap-16">
     {data.items.map((item) => (
-      <li>
-        <a href={`/posts/${item._id}`}>
-          {item.title}
-        </a>
-      </li>
+      <Article
+        title={item.title}
+        description={item.description}
+        thumbnailUrl={item.coverImage.src}
+        firstPublishedAt={item._sys.raw.firstPublishedAt}
+        url={`/posts/${item._id}`}
+      />  
     ))}
-  </ul>
+  </div>
 </Layout>
