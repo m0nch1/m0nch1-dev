@@ -17,7 +17,7 @@ const Article = (props: Props) => {
         <span class="text-gray-400 text-sm">{props.firstPublishedAt}</span>
 
         <h2 class="text-gray-800 text-xl font-bold">
-          <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">{props.title}</a>
+          <span>{props.title}</span>
         </h2>
 
         <p class="text-gray-500">{props.description}</p>

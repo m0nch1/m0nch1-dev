@@ -1,4 +1,6 @@
 ---
+import Layout from "@/layouts/index.astro";
+
 export const getStaticPaths = async () => {
   const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
   const baseHeaders = {
@@ -18,8 +20,12 @@ export const getStaticPaths = async () => {
 const {item} = Astro.props;
 ---
 
-<html lang="ja">
-<body>
-  <div set:html={item.body} />
-</body>
-</html>
+<Layout title={item.title}>
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-md px-4 md:px-8 mx-auto">
+    <h1 class="text-gray-800 text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-6">{item.title}</h1>
+
+    <main class="text-gray-500 sm:text-lg mb-6 md:mb-8" set:html={item.body} />
+  </div>
+</div>
+</Layout>
