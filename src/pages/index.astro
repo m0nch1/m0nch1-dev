@@ -1,9 +1,11 @@
 ---
 import Layout from '@/layouts/index.astro';
+
+import Atropos from "@/components/pages/home/Atropos/index.vue";
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">m0nch1 dev</span></h1>
+		<Atropos client:load />
 	</main>
 </Layout>
