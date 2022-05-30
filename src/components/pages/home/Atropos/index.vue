@@ -1,11 +1,8 @@
 <template>
   <atropos class="atropos" :shadow="false">
-    <img data-atropos-offset="-4.5" src="/i/atropos-bg.svg" alt="" />
-    <img data-atropos-offset="-2.5" src="/i/atropos-mountains.svg" alt="" />
-    <img data-atropos-offset="0" src="/i/atropos-forest-back.svg" alt="" />
-    <img data-atropos-offset="2" src="/i/atropos-forest-mid.svg" alt="" />
-    <img data-atropos-offset="4" src="/i/atropos-forest-front.svg" alt="" />
-    <img data-atropos-offset="5" src="/i/atropos-logo-en.svg" alt="" />
+    <img data-atropos-offset="-3" src="/m0nch1_golden.png" alt="" />
+    <img data-atropos-offset="0" src="/m0nch1_karekusa.png" alt="" />
+    <img data-atropos-offset="3" src="/m0nch1_green.png" alt="" />
   </atropos>
 </template>
 <script>

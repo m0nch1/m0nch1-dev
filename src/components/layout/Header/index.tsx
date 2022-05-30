@@ -4,7 +4,7 @@ const Header = () => {
       <div class="max-w-screen-2xl">
         <header class="flex justify-between items-center py-2 md:py-4">
           <a href="/" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
-            🐻 m0nch1
+            🐻
           </a>
 
           <nav class="hidden lg:flex gap-12">
