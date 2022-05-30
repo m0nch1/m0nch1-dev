@@ -3,7 +3,7 @@ import Layout from '@/layouts/index.astro';
 import Article from '@/components/pages/posts/Article';
 
 import dayjs from 'dayjs';
-import ja from 'dayjs/locale/ja';
+import ja from 'dayjs/locale/ja.js';
 dayjs.locale(ja);
 
 const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
