@@ -1,7 +1,5 @@
 <template>
-  <atropos
-    class="atropos max-w-screen-lg mx-auto pt-32 pb-16 px-4 md:px-8 lg:px-16"
-  >
+  <atropos class="atropos" :shadow="false">
     <img data-atropos-offset="-4.5" src="/i/atropos-bg.svg" alt="" />
     <img data-atropos-offset="-2.5" src="/i/atropos-mountains.svg" alt="" />
     <img data-atropos-offset="0" src="/i/atropos-forest-back.svg" alt="" />
@@ -23,7 +21,8 @@ export default {
 <style scoped lang="scss">
 .atropos {
   width: 100%;
-  height: 300px;
+  height: 500px;
+  object-fit: contain;
 
   img {
     position: absolute;
