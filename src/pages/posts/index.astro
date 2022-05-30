@@ -2,6 +2,10 @@
 import Layout from '@/layouts/index.astro';
 import Article from '@/components/pages/posts/Article';
 
+import dayjs from 'dayjs';
+import ja from 'dayjs/locale/ja';
+dayjs.locale(ja);
+
 const apiUrl = `https://${import.meta.env.PUBLIC_NEWT_SPACE_UID}.cdn.newt.so/v1/blog/article`;
 const baseHeaders = {
   headers: { 'Authorization': `Bearer ${import.meta.env.PUBLIC_NEWT_TOKET}` },
@@ -23,7 +27,7 @@ const data = await response.json();
         title={item.title}
         description={item.description}
         thumbnailUrl={item.coverImage.src}
-        firstPublishedAt={item._sys.raw.firstPublishedAt}
+        firstPublishedAt={dayjs(item._sys.raw.firstPublishedAt).format('YYYY/MM/DD')}
         url={`/posts/${item._id}`}
       />  
     ))}

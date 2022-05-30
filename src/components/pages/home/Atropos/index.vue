@@ -18,7 +18,7 @@ export default {
 <style scoped lang="scss">
 .atropos {
   width: 100%;
-  height: 500px;
+  height: 440px;
   object-fit: contain;
 
   img {
