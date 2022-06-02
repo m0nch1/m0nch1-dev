@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div class="bg-white pt-4 sm:pt-5 lg:pt-6 sticky top-full">
-      <footer class="max-w-screen-2xl">
+      <footer>
         <div class="flex flex-col md:flex-row justify-between items-center border-t border-b gap-4 py-4">
           <nav class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6">
             <a href="/posts" class="text-gray-500 hover:text-amber-600 active:text-amber-700 transition duration-100">Posts</a>
