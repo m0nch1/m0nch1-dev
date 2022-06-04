@@ -13,19 +13,20 @@ export const getStaticPaths = async () => {
   return data.items.map(item => {
     return {
       params: { id: item._id },
-      props: { item } };
+      props: { item } 
+    };
   });
 }
 
-const {item} = Astro.props;
+const { item } = Astro.props;
 ---
 
-<Layout title={item.title}>
-<div class="bg-white py-6 sm:py-8 lg:py-12">
-  <div class="px-4 md:px-8 mx-auto">
-    <h1 class="text-gray-800 text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-6">{item.title}</h1>
+<Layout title={item.title} thumbnailUrl={item.coverImage.src}>
+  <div class="bg-white py-6 sm:py-8 lg:py-12">
+    <div class="px-4 md:px-8 mx-auto">
+      <h1 class="text-gray-800 text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-6">{item.title}</h1>
 
-    <main class="text-gray-500 sm:text-lg mb-6 md:mb-8" set:html={item.body} />
+      <main class="text-gray-500 sm:text-lg mb-6 md:mb-8" set:html={item.body} />
+    </div>
   </div>
-</div>
 </Layout>
