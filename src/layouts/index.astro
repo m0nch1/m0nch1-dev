@@ -27,26 +27,19 @@ const { title, thumbnailUrl } = Astro.props as Props;
 
 	<title>{title}</title>
 
-	<script is:inline>
-		partytown = {
-			forward: ['dataLayer.push'],
-		}
-	</script>
-	<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=UA-224877844-2'>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-224877844-2"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	</script>
-	<script type='text/partytown'>
-		window.dataLayer = window.dataLayer || []
-		function gtag() {
-			dataLayer.push(arguments)
+  gtag('config', 'UA-224877844-2', {
+		'linker': {
+			'domains': ['mochigome.stores.cm']
 		}
-		gtag('js', new Date())
-		gtag('config', 'UA-224877844-2', {
-			'linker': {
-        'domains': ['mochigome.stores.cm', 'vercel.app']
-      },
-		});
-	</script>
+	});
+</script>
 </head>
 <body class="px-4 md:px-8">
   <Header client:load />
