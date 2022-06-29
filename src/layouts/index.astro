@@ -32,7 +32,7 @@ const { title, thumbnailUrl } = Astro.props as Props;
 			forward: ['dataLayer.push'],
 		}
 	</script>
-	<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-GTY2XLJS3R'>
+	<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=UA-224877844-2'>
 
 	</script>
 	<script type='text/partytown'>
@@ -41,10 +41,9 @@ const { title, thumbnailUrl } = Astro.props as Props;
 			dataLayer.push(arguments)
 		}
 		gtag('js', new Date())
-		gtag('config', 'G-GTY2XLJS3R')
 		gtag('config', 'UA-224877844-2', {
 			'linker': {
-        'domains': ['mochigome.stores.cm']
+        'domains': ['mochigome.stores.cm', 'vercel.app']
       },
 		});
 	</script>
