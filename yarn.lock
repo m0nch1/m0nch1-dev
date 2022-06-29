@@ -60,6 +60,14 @@
     unist-util-map "^3.0.1"
     unist-util-visit "^4.1.0"
 
+"@astrojs/partytown@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-0.1.5.tgz#3b3ff85be7d856828a507bab5788dfd193b121c3"
+  integrity sha512-c1l7LayuCH3m0iZoi3tUF9RmdffZDpDVmgxbm7eGcfVZeQ6HsS9Xh6jie7O2XwT07tudvQc6QONrp5Dfaja1Xg==
+  dependencies:
+    "@builder.io/partytown" "^0.4.5"
+    mrmime "^1.0.0"
+
 "@astrojs/prism@0.4.1", "@astrojs/prism@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-0.4.1.tgz#c23224f03497e40f6a993fddde08f436e37ffd6c"
@@ -315,6 +323,11 @@
   dependencies:
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
+
+"@builder.io/partytown@^0.4.5":
+  version "0.4.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.4.5.tgz#3c85e25a7102336b7da4c71a46e77722da052e74"
+  integrity sha512-HcHlmMYSpOxfJ0lFVxgZrvgIjz1Q8knlGuWkBpvjIp68j+xVWg969+sn7BCfyKhcGaYlnVOY/CEBHapQBcl0jw==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"

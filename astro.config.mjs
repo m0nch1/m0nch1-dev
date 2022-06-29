@@ -4,9 +4,11 @@ import solid from "@astrojs/solid-js";
 import tailwind from "@astrojs/tailwind";
 import vue from "@astrojs/vue";
 
+import partytown from '@astrojs/partytown'
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [solid(), vue(), tailwind()],
+  integrations: [solid(), vue(), tailwind(), partytown()],
   vite: {
     ssr: {
       noExternal: ["atropos"],

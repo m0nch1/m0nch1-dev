@@ -26,6 +26,23 @@ const { title, thumbnailUrl } = Astro.props as Props;
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
 	<title>{title}</title>
+
+	<script is:inline>
+		partytown = {
+			forward: ['dataLayer.push'],
+		}
+	</script>
+	<script type='text/partytown' src='https://www.googletagmanager.com/gtag/js?id=G-GTY2XLJS3R'>
+
+	</script>
+	<script type='text/partytown'>
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
+		gtag('config', 'G-GTY2XLJS3R')
+	</script>
 </head>
 <body class="px-4 md:px-8">
   <Header client:load />
